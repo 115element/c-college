@@ -1,1 +1,0 @@
-ADD_EXECUTABLE(qbubble_sort BubbleSort.c)

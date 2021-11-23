@@ -1,27 +1,4 @@
-"D:\DevelopmentSoftWare\CLion\CLion 2019.2.5\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\DevelopmentSoftWare\cWorkSpace\c-college
-CMake Error at CMakeLists.txt:11 (ADD_SUBDIRECTORY):
-  The source directory
-
-    D:/DevelopmentSoftWare/cWorkSpace/c-college/dynamic_memory_allocation
-
-  does not contain a CMakeLists.txt file.
-
-
-CMake Error at CMakeLists.txt:12 (ADD_SUBDIRECTORY):
-  The source directory
-
-    D:/DevelopmentSoftWare/cWorkSpace/c-college/dynamic_memory_allocation_demo
-
-  does not contain a CMakeLists.txt file.
-
-
-CMake Error at CMakeLists.txt:15 (ADD_SUBDIRECTORY):
-  The source directory
-
-    D:/DevelopmentSoftWare/cWorkSpace/c-college/what_is_a_variable_address
-
-  does not contain a CMakeLists.txt file.
-
-
--- Configuring incomplete, errors occurred!
-See also "D:/DevelopmentSoftWare/cWorkSpace/c-college/cmake-build-debug/CMakeFiles/CMakeOutput.log".
+"D:\Development\clion\CLion 2021.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\Development\cWorkSpace\c-college
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/Development/cWorkSpace/c-college/cmake-build-debug

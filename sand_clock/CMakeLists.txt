@@ -1,1 +1,0 @@
-ADD_EXECUTABLE(sand_clock SandClock.cpp)
