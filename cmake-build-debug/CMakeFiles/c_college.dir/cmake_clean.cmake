@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/c_college.dir/main.cpp.obj"
   "c_college.exe"
   "c_college.exe.manifest"
+  "c_college.lib"
   "c_college.pdb"
-  "libc_college.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
