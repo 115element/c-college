@@ -1,5 +1,4 @@
 ﻿/**
-
 break
 	1.break如果用于循环是用来终止循环
 	2.break如果用于switch,则是用来终止switch
@@ -20,31 +19,31 @@ for(1; 2; 3){
 
 **/
 
-#include <stdio.h>
+#include <stdio.h> //程序的第一行 #include <stdio.h> 是预处理器指令，告诉 C 编译器在实际编译之前要包含 stdio.h 文件。
 
-int main()
-{
-	int i = 2;
+int main() {
 
-	switch (i) {
-		case 2:
-			printf("数据为2\n");
-			break;
-		case 3:
-			printf("数据为3\n");
-			break;
-		default:
-			printf("默认值\n");
-			break;
-	}
+    const int i = 2; //定义常量，如果一个变量被 const 修饰，那么它的值就不能再被改变
 
-	int j,k;
-	for (j = 0; j < 3; ++j) {
-		for (k = 1; k < 4;k++) {
-			break;
-		}
-	}
+    switch (i) {
+        case 2:
+            printf("数据为2\n");
+            break;
+        case 3:
+            printf("数据为3\n");
+            break;
+        default:
+            printf("默认值\n");
+            break;
+    }
 
-	return 0;
+    int j, k;
+    for (j = 0; j < 3; ++j) {
+        for (k = 1; k < 4; k++) {
+            printf("why? \n");
+        }
+    }
+
+    return 0;
 }
 

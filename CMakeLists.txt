@@ -11,7 +11,8 @@ cmake_minimum_required(VERSION 3.16)
 set(CMAKE_CXX_STANDARD 14)
 
 ### add_executable 告诉工程生成一个可执行文件。
-add_executable(c_college main.cpp include/a.h)
+#add_executable(c_college main.cpp include/a.h src/com.example/chapter1/enum/EnumTest.c)
+add_executable(c_college main.cpp include/a.h )
 
 # add_executable(demo demo.cpp) # 生成可执行文件
 # add_library(common STATIC util.cpp) # 生成静态库
@@ -39,6 +40,7 @@ ADD_SUBDIRECTORY(src/com.example/chapter1/ui_99)
 ADD_SUBDIRECTORY(src/com.example/chapter1/what_is_a_variable_address)
 ADD_SUBDIRECTORY(src/com.example/chapter1/virus_memory)
 ADD_SUBDIRECTORY(src/com.example/chapter1/break_continue)
+ADD_SUBDIRECTORY(src/com.example/chapter1/enum)
 
 ADD_SUBDIRECTORY(src/com.example/chapter2/bubble_sort)
 ADD_SUBDIRECTORY(src/com.example/chapter2/queue)
@@ -51,7 +53,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter2/sand_clock)
 ADD_SUBDIRECTORY(src/com.example/chapter2/scanf_demo)
 ADD_SUBDIRECTORY(src/com.example/chapter2/sort_demo)
 
-ADD_SUBDIRECTORY(src/com.example/chapter3/message_box)
 ADD_SUBDIRECTORY(src/com.example/chapter3/array_address)
 ADD_SUBDIRECTORY(src/com.example/chapter3/pointer)
 ADD_SUBDIRECTORY(src/com.example/chapter3/pointer_and_array)
@@ -83,6 +84,16 @@ ADD_SUBDIRECTORY(src/com.example/chapter5/dynamic_memory_cross_function)
 ADD_SUBDIRECTORY(src/com.example/chapter5/equation)
 ADD_SUBDIRECTORY(src/com.example/chapter5/float_and_double)
 
+
+ADD_SUBDIRECTORY(src/com.example/chapter_generate_dll)
+ADD_SUBDIRECTORY(src/com.example/chapter_generate_lib)
+ADD_SUBDIRECTORY(src/com.example/chapter_use_dll)
+ADD_SUBDIRECTORY(src/com.example/chapter_use_lib)
+
+
+
+#将第三方库连接在一起
+#target_link_libraries(testMyLib libepilepsy.dll)
 
 
 # 遍历项目根目录下所有的 .cpp文件 【缺点：这种方法要求所有cpp文件命名不重复，不能含有中文，不能含有‘/’等字符！因为它就是直接Copy你的源码文件名的。】

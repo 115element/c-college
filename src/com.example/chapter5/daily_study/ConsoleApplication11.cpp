@@ -9,9 +9,6 @@ for循环的执行顺序是：对于for(expr1;expr2;expr3){expr4;}，
 ⑤回到②开始下一轮循环。
 
 **/
-
-//2
-
 #include <stdio.h>
 
 int main()
@@ -24,7 +21,6 @@ int main()
 		if (i % 2 == 0) {
 			sum += i;
 		}
-
 	}
 
 	printf("%d\n",sum);

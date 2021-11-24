@@ -13,9 +13,7 @@ int main(void)
 		if (i%2 == 1) {
 			++cnt;
 		}
-
 	}
-//3
 	printf("count = %d\n",cnt);
 
 	return 0;
