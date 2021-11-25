@@ -1,7 +1,4 @@
-﻿// ConsoleApplication51.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
-#include <stdio.h>
+﻿#include <stdio.h>
 
 /***
 先序遍历 [先访问根节点]
@@ -18,15 +15,10 @@
 	先中序遍历左子树
 	再中序遍历右子树
 	最后访问根节点
-
-
-
 ***/
 
 int main(void)
 {
-    
-
 	return 0;
 }
 

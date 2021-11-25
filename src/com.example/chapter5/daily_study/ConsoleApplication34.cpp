@@ -2,30 +2,26 @@
 #include <string.h>
 
 struct Student {
-	int sid;
-	char name[200];
-	int age;
+    int sid;
+    char name[200];
+    int age;
 };  // 分号不能省
 
 
-int main(void)
-{
-	struct Student st = {1000,"张三",12};
+int main(void) {
+    struct Student st = {1000, "张三", 12};
 
-	printf("%d %s %d\n",st.sid,st.name,st.age);
+    printf("%d %s %d\n", st.sid, st.name, st.age);
 
+    st.sid = 99;
 
+    //st.name = "lisi"; //error
+    strcpy(st.name, "lisi");
 
-	st.sid = 99;
+    st.age = 22;
 
-	//st.name = "lisi"; //error
-	strcpy(st.name,"lisi");
+    printf("%d %s %d\n", st.sid, st.name, st.age);
 
-	st.age = 22;
-
-	printf("%d %s %d\n", st.sid, st.name, st.age);
-
-
-	return 0;
+    return 0;
 }
 

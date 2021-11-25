@@ -10,7 +10,7 @@ cmake_minimum_required(VERSION 3.16)
 ### set命令用来设置变量
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(c_college main.cpp include/a.h )
+add_executable(c_college main.cpp include/a.h)
 
 
 ###  cmake:用add_subdirectory()添加外部项目文件夹
@@ -68,6 +68,11 @@ ADD_SUBDIRECTORY(src/com.example/chapter5/dynamic_memory_allocation_demo)
 ADD_SUBDIRECTORY(src/com.example/chapter5/dynamic_memory_cross_function)
 ADD_SUBDIRECTORY(src/com.example/chapter5/equation)
 ADD_SUBDIRECTORY(src/com.example/chapter5/float_and_double)
+
+ADD_SUBDIRECTORY(src/com.example/chapter6/introduction)
+ADD_SUBDIRECTORY(src/com.example/chapter6/variable)
+ADD_SUBDIRECTORY(src/com.example/chapter6/integer_constants)
+ADD_SUBDIRECTORY(src/com.example/chapter6/storage_class)
 
 
 ADD_SUBDIRECTORY(src/com.example/chapter_generate_dll)

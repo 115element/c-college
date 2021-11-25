@@ -19,27 +19,24 @@
 
 		只有在定义数组的同时才能整体赋值，
 		其它情况下整体赋值都是错误的
-***/ 
+***/
 
 #include <stdio.h>
 
-int main(void)
-{
-	int a[5];
+int main(void) {
+    int a[5];
 
-	scanf_s("%d",&a[0]);
-	printf("%d\n",a[0]);
+    scanf_s("%d", &a[0]);
+    printf("%d\n", a[0]);
 
-	scanf_s("%d", &a[3]);
-	printf("%d\n", a[3]);
-
+    scanf_s("%d", &a[3]);
+    printf("%d\n", a[3]);
 
 
-	for (int i = 0; i < 5; i++)
-	{
-		printf("%d",a[i]);
-	}
-	return 0;
+    for (int i = 0; i < 5; i++) {
+        printf("%d", a[i]);
+    }
+    return 0;
 }
 
 

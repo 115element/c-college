@@ -1,20 +1,19 @@
-﻿// ConsoleApplication20.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
+﻿#include <iostream>
 
-#include <iostream>
-
-int main()
-{
-	
-	do {
-		printf("哈哈!\n");
-	} while (1>2);
+int main() {
+    int i = 0;
+    do {
+        printf("哈哈!\n");
+        i++;
+    } while (i > 5);
 
 
-	while (2 > 3) {
-		printf("呵呵!\n");
-	}
+    int j = 0;
+    while (j > 3) {
+        j++;
+        printf("呵呵!\n");
+    }
 
-	return 0;
+    return 0;
 }
 

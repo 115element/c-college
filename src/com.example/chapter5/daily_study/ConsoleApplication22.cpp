@@ -1,8 +1,6 @@
-﻿
-#include <iostream>
+﻿#include <iostream>
 
 /**
-
 自增[或者自减]
 	分类：
 		前自增  ++i
@@ -20,25 +18,21 @@
 		编程时尽量屏蔽掉前自增和后自增的差别
 	
 	顺序点
-		
-
 **/
 
-int main()
-{
-  
-	int i;
-	int j;
-	int k;
-	int m;
+int main() {
+    int i;
+    int j;
+    int k;
+    int m;
 
-	i = j = 3; //等价于 i =3; j =3;
-	k = i++;
-	m = ++j;
+    i = j = 3; //等价于 i =3; j =3;
+    k = i++;
+    m = ++j;
 
-	printf("i=%d,j=%d,k=%d,m=%d",i,j,k,m);
+    printf("i=%d,j=%d,k=%d,m=%d", i, j, k, m);
 
-	return 0;
+    return 0;
 }
 
 

@@ -1,22 +1,21 @@
 ﻿#include <stdio.h>
 
-void f(int ** q) {
+void f(int **q) {
 
-	*q = (int *)0XFFFFFFFF;
+    *q = (int *) 0XFFFFFFFF;
 }
 
 
-int main(void)
-{
+int main(void) {
 
-	int i = 9;
-	int * p = &i;
+    int i = 9;
+    int *p = &i;
 
-	printf("%p\n",p);
-	f(&p);
-	printf("%p\n",p);
+    printf("%p\n", p);
+    f(&p);
+    printf("%p\n", p);
 
-	return 0;
+    return 0;
 }
 
 

@@ -11,20 +11,18 @@ for循环的执行顺序是：对于for(expr1;expr2;expr3){expr4;}，
 **/
 #include <stdio.h>
 
-int main()
-{
-	int i;
-	int sum = 0;
+int main() {
+    int i;
+    int sum = 0;
 
-	for  (i = 0; i < 101; ++i)
-	{
-		if (i % 2 == 0) {
-			sum += i;
-		}
-	}
+    for (i = 0; i < 101; ++i) {
+        if (i % 2 == 0) {
+            sum += i;
+        }
+    }
 
-	printf("%d\n",sum);
+    printf("%d\n", sum);
 
-	return 0;
+    return 0;
 }
 

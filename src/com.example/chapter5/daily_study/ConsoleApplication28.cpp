@@ -10,7 +10,6 @@
 		全局变量和局部变量命令冲突的问题
 		    在一个函数内部如果定义的局部变量的名字和全局变量名一样时，
 			局部变量会屏蔽掉全局变量
-
 ***/
 
 #include <stdio.h>
@@ -18,16 +17,15 @@
 int k = 1000;  //全局变量
 
 void f(int i) {
-	int j = 20; //局部变量
-	printf("k = %d\n",k);
+    int j = 20; //局部变量
+    printf("k = %d\n", k);
 }
 
 
-int main(void)
-{
-	printf("k = %d\n",k);
+int main(void) {
+    printf("k = %d\n", k);
 
-	return 0;
+    return 0;
 }
 
 

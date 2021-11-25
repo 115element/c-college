@@ -9,17 +9,14 @@
 
 模块一：线性结构[把所有的结点用一根直线穿起来]
 	    连续存储[数组]
-
-	   
 ****/
 
 #include <stdio.h>
 
-int main(void)
-{
-	int a[10];
-	int * pArr = (int *)malloc(sizeof(int));
-	return 0;
+int main(void) {
+    int a[10];
+    int *pArr = (int *) malloc(sizeof(int));
+    return 0;
 }
 
 

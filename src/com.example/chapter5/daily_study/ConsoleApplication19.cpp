@@ -1,20 +1,14 @@
 ﻿#include <iostream>
 
-int main()
-{
-	
-	
-	int input = 0;
+int main() {
 
-	printf("请输入您的小票号:\n");
-	scanf_s("%d",&input);  //&取地址符号
+    int input = 0;
 
-	printf("%d",input);
+    printf("请输入您的小票号:\n");
+    scanf_s("%d", &input);  //&取地址符号
 
+    printf("%d", input);
 
-
-
-
-	return 0;
+    return 0;
 }
 
