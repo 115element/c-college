@@ -10,22 +10,7 @@ cmake_minimum_required(VERSION 3.16)
 ### set命令用来设置变量
 set(CMAKE_CXX_STANDARD 14)
 
-### add_executable 告诉工程生成一个可执行文件。
-#add_executable(c_college main.cpp include/a.h src/com.example/chapter1/enum/EnumTest.c)
 add_executable(c_college main.cpp include/a.h )
-
-# add_executable(demo demo.cpp) # 生成可执行文件
-# add_library(common STATIC util.cpp) # 生成静态库
-# add_library(common SHARED util.cpp) # 生成动态库或共享库
-# add_library 默认生成是静态库，通过以上命令生成文件名字，
-#    在 Linux 下是：
-#        demo
-#        libcommon.a
-#        libcommon.so
-#    在 Windows 下是：
-#        demo.exe
-#        common.lib
-#        common.dll
 
 
 ###  cmake:用add_subdirectory()添加外部项目文件夹
@@ -89,11 +74,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter_generate_dll)
 ADD_SUBDIRECTORY(src/com.example/chapter_generate_lib)
 ADD_SUBDIRECTORY(src/com.example/chapter_use_dll)
 ADD_SUBDIRECTORY(src/com.example/chapter_use_lib)
-
-
-
-#将第三方库连接在一起
-#target_link_libraries(testMyLib libepilepsy.dll)
 
 
 # 遍历项目根目录下所有的 .cpp文件 【缺点：这种方法要求所有cpp文件命名不重复，不能含有中文，不能含有‘/’等字符！因为它就是直接Copy你的源码文件名的。】
