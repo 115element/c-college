@@ -1,7 +1,15 @@
-//
-// Created by alex on 2021/11/24.
-//
+#include <stdio.h>
+#include <Windows.h>
 
-int main() {
+typedef void(_stdcall* ExecFunc)(void);
+
+int main(){
+
+    HMODULE dllHandle = LoadLibraryA("C:\\Users\\sxh\\CLionProjects\\untitled2\\GenerateDll.dll");
+    if (dllHandle == NULL) return -1;
+
+    ExecFunc execFunc = (ExecFunc)GetProcAddress(dllHandle, "hello");
+    if (execFunc == NULL) return -2;
+
     return 0;
 }
