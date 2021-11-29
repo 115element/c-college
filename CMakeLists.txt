@@ -73,6 +73,7 @@ ADD_SUBDIRECTORY(src/com.example/chapter6/introduction)
 ADD_SUBDIRECTORY(src/com.example/chapter6/variable)
 ADD_SUBDIRECTORY(src/com.example/chapter6/integer_constants)
 ADD_SUBDIRECTORY(src/com.example/chapter6/storage_class)
+ADD_SUBDIRECTORY(src/com.example/chapter6/sign_of_operation)
 
 
 ADD_SUBDIRECTORY(src/com.example/chapter_generate_dll)
