@@ -13,6 +13,12 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(c_college main.cpp include/a.h)
 
 
+ADD_SUBDIRECTORY(src/com.example/chapter_generate_dll)
+ADD_SUBDIRECTORY(src/com.example/chapter_generate_lib)
+ADD_SUBDIRECTORY(src/com.example/chapter_use_dll)
+ADD_SUBDIRECTORY(src/com.example/chapter_use_lib)
+
+
 ###  cmake:用add_subdirectory()添加外部项目文件夹
 ###  一般情况下，我们的项目各个子项目都在一个总的项目根目录下，但有的时候，我们需要使用外部的文件夹，怎么办呢？
 ###  add_subdirectory命令，可以将指定的文件夹加到build任务列表中。下面是将与当前项目平级的一个目录下的子目录用
@@ -74,12 +80,16 @@ ADD_SUBDIRECTORY(src/com.example/chapter6/variable)
 ADD_SUBDIRECTORY(src/com.example/chapter6/integer_constants)
 ADD_SUBDIRECTORY(src/com.example/chapter6/storage_class)
 ADD_SUBDIRECTORY(src/com.example/chapter6/sign_of_operation)
+ADD_SUBDIRECTORY(src/com.example/chapter6/print_pointer)
+ADD_SUBDIRECTORY(src/com.example/chapter6/scanf_use)
+ADD_SUBDIRECTORY(src/com.example/chapter6/function_use)
+ADD_SUBDIRECTORY(src/com.example/chapter6/action_scope)
+ADD_SUBDIRECTORY(src/com.example/chapter6/array_use)
+ADD_SUBDIRECTORY(src/com.example/chapter6/enum_use)
+ADD_SUBDIRECTORY(src/com.example/chapter6/pointer_use)
+ADD_SUBDIRECTORY(src/com.example/chapter6/fun_pointer)
+ADD_SUBDIRECTORY(src/com.example/chapter6/call_fun)
 
-
-ADD_SUBDIRECTORY(src/com.example/chapter_generate_dll)
-ADD_SUBDIRECTORY(src/com.example/chapter_generate_lib)
-ADD_SUBDIRECTORY(src/com.example/chapter_use_dll)
-ADD_SUBDIRECTORY(src/com.example/chapter_use_lib)
 
 
 # 遍历项目根目录下所有的 .cpp文件 【缺点：这种方法要求所有cpp文件命名不重复，不能含有中文，不能含有‘/’等字符！因为它就是直接Copy你的源码文件名的。】
