@@ -1,3 +1,4 @@
+//#pragma用于指示编译器完成一些特定的动作
 //#pragma once这个宏有什么作用？为了避免同一个头文件被包含（include）多次，C/C++中有两种宏实现方式：一种是#ifndef方式；另一种是#pragma once方式。
 #pragma once
 
