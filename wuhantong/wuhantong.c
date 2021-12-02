@@ -5,7 +5,8 @@
 #include <math.h>
 #include <Windows.h>
 
-typedef int(_stdcall* ExecFunc)(int, const char*, int*, char**);
+//定义函数指针
+typedef int(__stdcall* ExecFunc)(int, const char*, int*, char**);
 
 int main(int argc, char** argv) {
     if (argc != 2) {

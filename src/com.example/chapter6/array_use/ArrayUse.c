@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,10 +13,10 @@ int main() {
     /// 其实指向整个d数组的指针当然也是指向整个数组的起始地址也是d[0]。
     /// 所以a和&a的内存地址指针也是一样的。虽然他们的内存指针地址是相同的。
     /// 但是对这两个指针进行加减表示的含义是不同的。
-    /// d+1	   指针移动sizeof(double)8个字节
-    /// &d+1   指针移动sizeof(d)40个字节
+    /// d + 1	   指针移动sizeof(double)8个字节
+    /// &d + 1     指针移动sizeof(d)40个字节
 
-    
+
     printf("double d size = %d \n", sizeof(d));
 
     for (int i = 0; i < 5; ++i) {

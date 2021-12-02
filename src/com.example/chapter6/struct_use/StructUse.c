@@ -4,6 +4,35 @@
 //C 结构体
 //C 数组允许定义可存储相同类型数据项的变量，结构是 C 编程中另一种用户自定义的可用的数据类型，它允许您存储不同类型的数据项。
 
+
+/// 定义结构
+///         为了定义结构，您必须使用 struct 语句。struct 语句定义了一个包含多个成员的新的数据类型，struct 语句的格式如下：
+///
+/// struct tag {
+///     member-list
+///     member-list
+///     member-list
+///     ...
+/// } variable-list ;
+///
+/// tag 是结构体标签。
+/// member-list 是标准的变量定义，比如 int i; 或者 float f，或者其他有效的变量定义。
+/// variable-list 结构变量，定义在结构的末尾，最后一个分号之前，您可以指定一个或多个结构变量。
+
+///========结构体变量的作用,请看以下例子就知道了=========
+/// 结构体变量的初始化 【和其它类型变量一样，对结构体变量可以在定义时指定初始值。】
+/// struct Books {
+///     char title[50];
+/// } book = {"C 语言"} , *bk;
+///
+/// int main() {
+///     printf("title : %s", book.title);
+///     printf("%p ", bk);
+/// }
+
+
+
+
 #include <stdio.h>
 #include <string.h>
 
@@ -93,6 +122,11 @@ int main() {
 
     //访问结构体
     printf("%s %d", bean.author, bean.book_id);
+
+    //通过结构体变量访问结构体
+    printf("%s", book.subject);
+
+    printf("\n %p ", u3);
 
     void accessStruct();
     accessStruct();

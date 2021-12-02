@@ -72,7 +72,7 @@ void dynamicMem() {
         strcpy(description, "Zara12ss12a12sss12345678911111112");
     }
 
-    //假设你想要存储更大的描述信息
+    //假设你想要存储更大的描述信息(也就是重新分配内存)
     description = (char *) realloc(description, 100 * sizeof(char));
     if (description == NULL) {
         fprintf(stderr, "Error - unable to required memory\n");

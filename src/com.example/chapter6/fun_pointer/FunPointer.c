@@ -15,6 +15,9 @@
 typedef int (*fun_ptr)(int, int); //声明一个指向同样参数、返回值的函数指针类型
 
 
+typedef int (__stdcall *fun_ptr1)(int, int); //声明一个指向同样参数、返回值的函数指针类型 //__stdcall是一种标准函数约定
+
+
 int max1(int x, int y) {
     return x > y ? x : y;
 };

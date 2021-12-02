@@ -23,6 +23,8 @@ int main() {
     scanf_s("%s", string, 20);
     printf("你输入的字符串是  %s", string);
 
+    system("pause");
+
     return 0;
 }
 
