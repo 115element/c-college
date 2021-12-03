@@ -43,7 +43,33 @@
 //计算当前日历时间，并把它编码成 time_t 格式。
 
 
-int main(){
+#include <stdio.h>
+
+int main(int argc, char **argv) {
+
+    printf("char byte = %d \n", sizeof(char)); // 1
+    printf("int byte = %d \n", sizeof(int)); // 4
+    printf("long byte = %d \n", sizeof(long)); // 4
+    printf("long long byte = %d \n", sizeof(long long)); // 8
+    struct test {
+        char a;
+        char b;
+        int c;
+    } x;
+    x.a = 'a';
+    x.b = 'b';
+    x.c = 1;
+    printf("%p \n", &x);
+    printf("%p \n", &x.a); //点的优先级最高，所以表示取(x中a)的地址
+    printf("%p \n", &x.b); //点的优先级最高，所以表示取(x中b)的地址
+    printf("%p \n", &x.c); //点的优先级最高，所以表示取(x中c)的地址
+
+//    0136FBD8
+//    0136FBD8
+//    0136FBD9
+//    0136FBDC
+
+/// 从上面例子可以看出，计算机内存是1字节，分配一个地址
 
     return 0;
 }
