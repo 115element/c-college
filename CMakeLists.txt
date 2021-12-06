@@ -106,6 +106,7 @@ ADD_SUBDIRECTORY(src/com.example/chapter6/command_line_var)
 ADD_SUBDIRECTORY(src/com.example/chapter6/sort)
 ADD_SUBDIRECTORY(src/com.example/chapter6/http_get)
 ADD_SUBDIRECTORY(src/com.example/chapter6/http_post)
+ADD_SUBDIRECTORY(src/com.example/chapter6/main_method)
 
 ADD_SUBDIRECTORY(src/com.example/chapter7/assert_h)
 ADD_SUBDIRECTORY(src/com.example/chapter7/errno_h)
