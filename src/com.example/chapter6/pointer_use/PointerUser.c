@@ -7,12 +7,10 @@
 #include <stdlib.h>
 
 int main() {
-
     int var = 10;
     int *p; //定义指针变量
     p = &var;
     printf("memory address: %p \n", p);
-
 
     int *i;         //一个整形的指针
     double *dp;     //一个double型的指针
@@ -27,6 +25,12 @@ int main() {
     void pointerNull();
     pointerNull();
 
+    void pointerArray();
+    pointerArray();
+
+    void arrayPointer();
+    arrayPointer();
+
     return 0;
 }
 
@@ -36,12 +40,12 @@ void pointer1() {
 
     int var = 20; //实际变量的声明
     int *ip; //指针变量的声明
-
     ip = &var; //在指针变量中存储var的地址
-    printf("ip变量存储的地址 %p \n", ip);
 
-    printf("ip变量的值 %d \n", *ip);
+    printf("ip变量存储的地址 %p \n", ip);
+    printf("ip变量的值 %d \n", *ip); //获取指针指向位置的数据
 }
+
 
 
 void pointerNull() {
@@ -52,14 +56,13 @@ void pointerNull() {
     // 然而，内存地址 0 有特别重要的意义，它表明该指针不指向一个可访问的内存位置。但按照惯例，如果指针包含空值（零值），则假定它不指向任何东西。
     // 如需检查一个空指针，您可以使用 if 语句，如下所示
 
-
     //// 如果 p 非空，则完成
     if (ptr) {
         printf("not null");
     }
     //// 如果 p 为空，则完成
     if (!ptr) {
-        printf("is null");
+        printf("is null \n");
     }
 
 //    if(expr)
@@ -79,4 +82,45 @@ void pointerNull() {
 //    指向指针的指针	    C 允许指向指针的指针。
 //    传递指针给函数	    通过引用或地址传递参数，使传递的参数在调用函数中被改变。
 //    从函数返回指针	    C 允许函数返回指针到局部变量、静态变量和动态内存分配。
+}
+
+
+
+void arrayPointer() {
+    int (*q)[] = NULL;  /// 数组指针，他本质上是一个指针，指向数组的首地址。 ---(注意：本质上是一个指针，所以只能当做指针来用)
+
+    int a1[] = {9, 8, 7};
+    q = &a1; //等价q = a1;
+
+    /// *q相当于得到了数组的首地址，因为q就是一个指针。
+    printf("======== %d \n", **q); //9
+    printf("======== %d \n", *(*q + 1)); //8
+    printf("======== %d \n", *(*q + 2)); //7
+
+///    int arr1[][4] = {{1,2,3,4},{12,23,34,45},{1234,23456,34567}};
+///    int (*pp)[4] = arr1;
+
+///    int arr2[] = {1, 2, 3, 4};
+///    int (*pp) = arr2;
+}
+
+
+
+void pointerArray() {
+    int var[] = {1, 2, 3, 4, 5};
+    int *p[5]; /// 指针数组，他本质上是一个数组 ，这个数组里面的所有元素都是指针。 ---(注意：本质上是一个数组，所以只能当做数组来用)
+
+    for (int i = 0; i < 5; i++) {
+        p[i] = &var[i];
+        printf("%p \n", p[i]);
+    }
+
+    for (int i = 0; i < 5; i++) {
+        printf("PPP= %p ", p[i]);
+        printf("VVV= %d \n", *p[i]);
+    }
+
+    ///////////////////////////////////
+    int a = 1, b = 2, c = 3, d = 4;
+    int *pp[4] = {&a, &b, &c, &d}; //指针数组，他本质上是一个数组 ，这个数组里面的所有元素都是指针。
 }
