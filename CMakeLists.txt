@@ -127,6 +127,10 @@ ADD_SUBDIRECTORY(src/com.example/chapter7/ctype_h)
 
 
 
+ADD_SUBDIRECTORY(src/com.example/further/code1)
+
+
+
 # 遍历项目根目录下所有的 .cpp文件 【缺点：这种方法要求所有cpp文件命名不重复，不能含有中文，不能含有‘/’等字符！因为它就是直接Copy你的源码文件名的。】
 #file(GLOB_RECURSE files *.cpp)
 #foreach(file ${files})
