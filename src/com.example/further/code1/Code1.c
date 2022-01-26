@@ -15,7 +15,22 @@ int main(int argc, char *argv[]) {
     scanf_s("%d", &number);
 
     //printf() 显示格式化输入
-    printf("您输入的整数是: %d", number);
+    printf("您输入的整数: %d \n", number);
+
+
+    char c; //声明char变量
+    c = 'A';
+    printf("c 的值为 %c \n", c);
+
+
+    float f;        //声明浮点数变量
+    f = 12.0001234f; //定义浮点数变量
+    printf("f的值为 %f \n", f);
+
+
+    double d; //声明双精度变量
+    d = 12.001234; //小数默认双精度
+    printf("d的值为 %le", d);
 
     return 0;
 }

@@ -128,6 +128,8 @@ ADD_SUBDIRECTORY(src/com.example/chapter7/ctype_h)
 
 
 ADD_SUBDIRECTORY(src/com.example/further/code1)
+ADD_SUBDIRECTORY(src/com.example/further/code2)
+ADD_SUBDIRECTORY(src/com.example/further/transfer_parameters)
 
 
 
