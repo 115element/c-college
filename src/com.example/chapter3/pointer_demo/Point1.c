@@ -7,7 +7,7 @@ struct Student {
 int main(void)
 {
     //方式1
-    struct Student st = {80,66.6,'F'};
+    struct Student st = {80,66.6f,'F'};
 
     //方式2
     struct Student st2;

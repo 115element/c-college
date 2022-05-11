@@ -132,6 +132,7 @@ ADD_SUBDIRECTORY(src/com.example/further/code2)
 ADD_SUBDIRECTORY(src/com.example/further/code3)
 ADD_SUBDIRECTORY(src/com.example/further/transfer_parameters)
 ADD_SUBDIRECTORY(src/com.example/further/log)
+ADD_SUBDIRECTORY(src/com.example/study/char)
 
 
 
