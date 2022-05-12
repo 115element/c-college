@@ -10,7 +10,7 @@ cmake_minimum_required(VERSION 3.16)
 ### set命令用来设置变量
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(c_college main.cpp include/a.h)
+add_executable(c_college main.cpp include/a.h )
 
 
 ADD_SUBDIRECTORY(src/com.example/chapter_generate_dll)
@@ -133,6 +133,15 @@ ADD_SUBDIRECTORY(src/com.example/further/code3)
 ADD_SUBDIRECTORY(src/com.example/further/transfer_parameters)
 ADD_SUBDIRECTORY(src/com.example/further/log)
 ADD_SUBDIRECTORY(src/com.example/study/char)
+ADD_SUBDIRECTORY(src/com.example/study/array1)
+ADD_SUBDIRECTORY(src/com.example/study/array2)
+ADD_SUBDIRECTORY(src/com.example/study/array3)
+ADD_SUBDIRECTORY(src/com.example/study/sizeof)
+ADD_SUBDIRECTORY(src/com.example/study/static1)
+ADD_SUBDIRECTORY(src/com.example/study/static2)
+ADD_SUBDIRECTORY(src/com.example/study/static3)
+ADD_SUBDIRECTORY(src/com.example/study/decimal)
+ADD_SUBDIRECTORY(src/com.example/main/main)
 
 
 

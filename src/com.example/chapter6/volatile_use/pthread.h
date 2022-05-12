@@ -470,7 +470,7 @@ extern int pthread_getaffinity_np (pthread_t __th, size_t __cpusetsize,
 
 /* Guarantee that the initialization function INIT_ROUTINE will be called
    only once, even if pthread_once is executed several times with the
-   same ONCE_CONTROL argument. ONCE_CONTROL must point to a static or
+   same ONCE_CONTROL argument. ONCE_CONTROL must point to a static1 or
    extern variable initialized to PTHREAD_ONCE_INIT.
 
    The initialization functions might throw exception which is why

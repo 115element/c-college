@@ -3,6 +3,11 @@
 
 int main(int argc, char *argv[]) {
 
+    //typeof(int *) a,b;
+    //等价于：
+    //int *a,*b;
+
+
     system("chcp 65001");
 
     printf("hello world");

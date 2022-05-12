@@ -31,4 +31,10 @@ int main(void) {
     //如果想声明两个指针，那么可用以下方法哦
     char *aa, *bb;
 
+
+
+
+    char a[] = "123456";
+
+    printf("%s",a);
 }
