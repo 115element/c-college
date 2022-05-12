@@ -35,6 +35,5 @@ int main(void) {
 
 
     char a[] = "123456";
-
     printf("%s",a);
 }

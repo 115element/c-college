@@ -1,7 +1,8 @@
 //java和c 默认小数类型都是double
 #include <stdbool.h>
+#include <stdio.h>
 
-int main(void){
+int main(void) {
 
     float a = 1.1f;
     double b = 2.2;
@@ -14,6 +15,13 @@ int main(void){
     bool boolean1 = true;
     bool boolean2 = false;
 
+
+    //char 是一个字节
+    char arr[] = {1, 2, 3};
+    printf("%p \n", arr);
+    printf("%p \n", arr + 1);
+
+    char *arrP = arr;
 
 
     return 0;

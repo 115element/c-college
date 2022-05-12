@@ -1,11 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+struct x1 {
+};
+
+typedef struct x3 {
+} x3;
+
+
 int main(int argc, char *argv[]) {
 
     //typeof(int *) a,b;
     //等价于：
     //int *a,*b;
+
+    struct x1 b1;
+    x3 b2;
 
 
     system("chcp 65001");

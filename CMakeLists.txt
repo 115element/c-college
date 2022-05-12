@@ -10,7 +10,7 @@ cmake_minimum_required(VERSION 3.16)
 ### set命令用来设置变量
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(c_college main.cpp include/a.h )
+add_executable(c_college main.cpp include/A.h)  ##该命令表示，生成可执行文件
 
 
 ADD_SUBDIRECTORY(src/com.example/chapter_generate_dll)
@@ -127,11 +127,10 @@ ADD_SUBDIRECTORY(src/com.example/chapter7/ctype_h)
 
 
 
-ADD_SUBDIRECTORY(src/com.example/further/code1)
-ADD_SUBDIRECTORY(src/com.example/further/code2)
-ADD_SUBDIRECTORY(src/com.example/further/code3)
-ADD_SUBDIRECTORY(src/com.example/further/transfer_parameters)
-ADD_SUBDIRECTORY(src/com.example/further/log)
+ADD_SUBDIRECTORY(src/com.example/study/code1)
+ADD_SUBDIRECTORY(src/com.example/study/code2)
+ADD_SUBDIRECTORY(src/com.example/study/code3)
+ADD_SUBDIRECTORY(src/com.example/study/transfer_parameters)
 ADD_SUBDIRECTORY(src/com.example/study/char)
 ADD_SUBDIRECTORY(src/com.example/study/array1)
 ADD_SUBDIRECTORY(src/com.example/study/array2)
@@ -142,6 +141,7 @@ ADD_SUBDIRECTORY(src/com.example/study/static2)
 ADD_SUBDIRECTORY(src/com.example/study/static3)
 ADD_SUBDIRECTORY(src/com.example/study/decimal)
 ADD_SUBDIRECTORY(src/com.example/main/main)
+ADD_SUBDIRECTORY(src/com.example/study/eof)
 
 
 
