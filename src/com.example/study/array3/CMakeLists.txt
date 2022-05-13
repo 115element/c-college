@@ -1,1 +1,1 @@
-add_executable(array3 File2.c)
+add_executable(array3 ArrayDefine.c)
