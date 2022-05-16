@@ -144,6 +144,8 @@ ADD_SUBDIRECTORY(src/com.example/main/main)
 ADD_SUBDIRECTORY(src/com.example/study/eof)
 ADD_SUBDIRECTORY(src/com.example/study/function)
 ADD_SUBDIRECTORY(src/com.example/study/string)
+ADD_SUBDIRECTORY(src/com.example/study/libraryfun)
+ADD_SUBDIRECTORY(src/com.example/study/random)
 
 
 
