@@ -10,18 +10,26 @@ cmake_minimum_required(VERSION 3.16)
 ### set命令用来设置变量
 set(CMAKE_CXX_STANDARD 14)
 
+
+#添加头文件搜索路径
+#include_directories(C:\\MinGW\\include)
+#添加库文件搜索路径
+#link_directories(C:\\MinGW\\lib)
+
+
 add_executable(c_college main.cpp include/A.h )  ##该命令表示，生成可执行文件
 
 
+
+###  cmake:用add_subdirectory()添加外部项目文件夹
+###  一般情况下，我们的项目各个子项目都在一个总的项目根目录下，但有的时候，我们需要使用外部的文件夹，怎么办呢？
+###  add_subdirectory命令，可以将指定的文件夹加到build任务列表中。下面是将与当前项目平级的一个目录下的子目录用;
 ADD_SUBDIRECTORY(src/com.example/chapter_generate_dll)
 ADD_SUBDIRECTORY(src/com.example/chapter_generate_lib)
 ADD_SUBDIRECTORY(src/com.example/chapter_use_dll)
 ADD_SUBDIRECTORY(src/com.example/chapter_use_lib)
 
 
-###  cmake:用add_subdirectory()添加外部项目文件夹
-###  一般情况下，我们的项目各个子项目都在一个总的项目根目录下，但有的时候，我们需要使用外部的文件夹，怎么办呢？
-###  add_subdirectory命令，可以将指定的文件夹加到build任务列表中。下面是将与当前项目平级的一个目录下的子目录用
 ADD_SUBDIRECTORY(src/com.example/chapter1/continue_break)
 ADD_SUBDIRECTORY(src/com.example/chapter1/struct)
 ADD_SUBDIRECTORY(src/com.example/chapter1/tradition_array_flaw)
@@ -31,7 +39,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter1/what_is_a_variable_address)
 ADD_SUBDIRECTORY(src/com.example/chapter1/virus_memory)
 ADD_SUBDIRECTORY(src/com.example/chapter1/break_continue)
 ADD_SUBDIRECTORY(src/com.example/chapter1/enum)
-
 ADD_SUBDIRECTORY(src/com.example/chapter2/bubble_sort)
 ADD_SUBDIRECTORY(src/com.example/chapter2/queue)
 ADD_SUBDIRECTORY(src/com.example/chapter2/recombination_pointer)
@@ -42,7 +49,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter2/run_multi_source)
 ADD_SUBDIRECTORY(src/com.example/chapter2/sand_clock)
 ADD_SUBDIRECTORY(src/com.example/chapter2/scanf_demo)
 ADD_SUBDIRECTORY(src/com.example/chapter2/sort_demo)
-
 ADD_SUBDIRECTORY(src/com.example/chapter3/array_address)
 ADD_SUBDIRECTORY(src/com.example/chapter3/pointer)
 ADD_SUBDIRECTORY(src/com.example/chapter3/pointer_and_array)
@@ -53,7 +59,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter3/prime_number)
 ADD_SUBDIRECTORY(src/com.example/chapter3/primitive_type_pointer)
 ADD_SUBDIRECTORY(src/com.example/chapter3/printf_demo)
 ADD_SUBDIRECTORY(src/com.example/chapter3/printlf_demo)
-
 ADD_SUBDIRECTORY(src/com.example/chapter4/float)
 ADD_SUBDIRECTORY(src/com.example/chapter4/float_point)
 ADD_SUBDIRECTORY(src/com.example/chapter4/formal_parameters_and_arguments)
@@ -65,7 +70,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter4/if_han_tower)
 ADD_SUBDIRECTORY(src/com.example/chapter4/integrated_application)
 ADD_SUBDIRECTORY(src/com.example/chapter4/linear_array)
 ADD_SUBDIRECTORY(src/com.example/chapter4/linear_array_and_pointer)
-
 ADD_SUBDIRECTORY(src/com.example/chapter5/constants_store)
 ADD_SUBDIRECTORY(src/com.example/chapter5/count_down)
 ADD_SUBDIRECTORY(src/com.example/chapter5/dynamic_memory_allocation)
@@ -73,7 +77,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter5/dynamic_memory_allocation_demo)
 ADD_SUBDIRECTORY(src/com.example/chapter5/dynamic_memory_cross_function)
 ADD_SUBDIRECTORY(src/com.example/chapter5/equation)
 ADD_SUBDIRECTORY(src/com.example/chapter5/float_and_double)
-
 ADD_SUBDIRECTORY(src/com.example/chapter6/introduction)
 ADD_SUBDIRECTORY(src/com.example/chapter6/variable)
 ADD_SUBDIRECTORY(src/com.example/chapter6/integer_constants)
@@ -108,7 +111,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter6/http_get)
 ADD_SUBDIRECTORY(src/com.example/chapter6/http_post)
 ADD_SUBDIRECTORY(src/com.example/chapter6/main_method)
 ADD_SUBDIRECTORY(src/com.example/chapter6/volatile_use)
-
 ADD_SUBDIRECTORY(src/com.example/chapter7/assert_h)
 ADD_SUBDIRECTORY(src/com.example/chapter7/errno_h)
 ADD_SUBDIRECTORY(src/com.example/chapter7/float_h)
@@ -124,9 +126,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter7/stdlib_h)
 ADD_SUBDIRECTORY(src/com.example/chapter7/string_h)
 ADD_SUBDIRECTORY(src/com.example/chapter7/time_h)
 ADD_SUBDIRECTORY(src/com.example/chapter7/ctype_h)
-
-
-
 ADD_SUBDIRECTORY(src/com.example/study/code1)
 ADD_SUBDIRECTORY(src/com.example/study/code2)
 ADD_SUBDIRECTORY(src/com.example/study/pointArray_arrayPoint)
@@ -141,11 +140,14 @@ ADD_SUBDIRECTORY(src/com.example/study/static2)
 ADD_SUBDIRECTORY(src/com.example/study/static3)
 ADD_SUBDIRECTORY(src/com.example/study/decimal)
 ADD_SUBDIRECTORY(src/com.example/main/main)
+ADD_SUBDIRECTORY(src/com.example/main/moreparam)
 ADD_SUBDIRECTORY(src/com.example/study/eof)
 ADD_SUBDIRECTORY(src/com.example/study/function)
 ADD_SUBDIRECTORY(src/com.example/study/string)
 ADD_SUBDIRECTORY(src/com.example/study/libraryfun)
 ADD_SUBDIRECTORY(src/com.example/study/random)
+ADD_SUBDIRECTORY(src/com.example/study/socket)
+ADD_SUBDIRECTORY(src/com.example/study/signal)
 
 
 

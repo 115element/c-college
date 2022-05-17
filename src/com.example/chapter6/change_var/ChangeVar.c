@@ -33,7 +33,7 @@ double average(int num, ...) {
     double sum = 0.0;
 
     //为num个参数初始化 valist
-            va_start(vaList, num);
+    va_start(vaList, num);
 
     //访问所有赋给 valist 的参数
     for (int j = 0; j < num; ++j) {
