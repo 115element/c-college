@@ -75,3 +75,15 @@ void s() {
         }
     }
 }
+
+
+//这里的代码是正确的
+int pstrcmp(const void *p1, const void *p2) {
+    //char *point = "123";
+
+    char *const *a = (char *const *) p1;
+    char *const *b = (char *const *) p2;
+
+    //*a = point;  编译不通过，因为该指针是const修饰，不能修改，是只读的；
+    return strcmp(*a, *b);
+}
