@@ -35,5 +35,10 @@ int main(void) {
 
 
     char a[] = "123456";
-    printf("%s",a);
+    printf("%s \n",a);
+
+    int i1 = sizeof('a'); //返回4，你可能吃惊，为什么不是1，因为C语言的字符常量是int型
+    int i2 = sizeof(char); //返回1
+    int i3 = sizeof(int); //返回4
+    printf("%d  %d  %d\n", i1, i2, i3);
 }
