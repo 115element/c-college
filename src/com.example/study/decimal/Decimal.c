@@ -4,6 +4,12 @@
 
 int main(void) {
 
+
+    float x1 = 1.f;
+    double x2 = 2.;
+    printf("%f \n",x1);
+    printf("%lf \n",x2);
+
     float a = 1.1f;
     double b = 2.2;
 
