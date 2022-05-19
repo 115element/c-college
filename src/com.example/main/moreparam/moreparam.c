@@ -21,6 +21,12 @@ void fun(int a, ...) {
 }
 
 int main() {
+    int p1 = sizeof('a');
+    int p2 = sizeof(char);
+    int p3 = sizeof(int);
+    printf("%d %d %d\n", p1, p2, p3); // 4字节 1字节 4字节
+    //C语言中的字符常量是int型，因此sizeof('a')是sizeof(int);
+
     fun(20, 40, 60, 80, 0);
     return 0;
 }
@@ -32,6 +38,7 @@ void verror(const char *fmt, va_list argp) {
     vfprintf(stderr, fmt, argp);
     fprintf(stderr, "\n");
 }
+
 void error(const char *fmt, ...) {
     va_list argp;
     va_start(argp, fmt);

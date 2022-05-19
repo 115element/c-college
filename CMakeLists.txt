@@ -1,7 +1,7 @@
 ####CMakeLists.txt用于描述哪些目录下的文件需要被编译,CMakeList.txt 文件中，命令名字是不区分大小写的，而参数和变量是大小写相关的。
 
-### 第一个行project不是强制性的，最好加上，这会引入两个变量：HELLO_BINARY_DIR, HELLO_SOURCE_DIR
-### 同时也会定义两个等价的变量：PROJECT_BINARY_DIR, PROJECT_SOURCE_DIR
+# 2、设置项目名称，它会引入两个变量 c_college_BINARY_DIR 和 c_college_SOURCE_DIR，
+# 同时，cmake 自动定义了两个等价的变量 PROJECT_BINARY_DIR 和 PROJECT_SOURCE_DIR。
 project(c_college)
 
 ### 指定 cmake 的最小版本
@@ -12,12 +12,12 @@ set(CMAKE_CXX_STANDARD 14)
 
 
 #添加头文件搜索路径
-#include_directories(C:\\MinGW\\include)
+#include_directories(D:\\Development\\cWorkSpace\\c-college\\include)
 #添加库文件搜索路径
 #link_directories(C:\\MinGW\\lib)
 
 
-add_executable(c_college main.cpp include/A.h )  ##该命令表示，生成可执行文件
+add_executable(c_college main.c include/A.h)  ##该命令表示，生成可执行文件
 
 
 
