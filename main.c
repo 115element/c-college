@@ -10,15 +10,6 @@
 typedef unsigned char myByte;
 
 
-// 定义指向特定类型函数的指针别名，注意主语是指针。
-// 语法：typedefaa int (*MyFun)(int, int);
-// 下面这个typedef不写去掉也是合法的；
-typedef int(__stdcall *my_fun)(int,int); //声明一个指向同样参数、返回值的函数指针类型 //__stdcall是一种标准函数约定
-
-
-int func(int n1,int n2) {
-}
-
 void function(int *num) {
     //通过改变num对应地址的值来实现值的改变：
     //形参num是一个指针，传递过来的是一个地址值，解引用即可访问到这个地址值映射的值

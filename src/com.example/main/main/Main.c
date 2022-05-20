@@ -1,14 +1,28 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void) {
+
+    char str[50];
+    strcpy(str, "1This is string.h library function");
+    puts(str);
+    memset(str, 65, 7);
+    puts(str);
+
+
+//    char *str1 = "2This is string.h library function";
+//    puts(str1);
+//    memset(str1, '$', 7); //无法正确执行，此函数内部会报错， 因为str1指向的是常量，属于静态数据，只读；
+//    puts(str1);
+
+
+
 
     //问：以下的初始化有什么区别？
     char a[] = "string literal";
     char *p = "string literal";
 
     //当我向p[i]赋值的时候，我的程序崩溃了
-
-
 
     void s1();
     s1();
@@ -33,7 +47,7 @@ void s1() {
 void s2() {
     union {
         int i;
-        char c[sizeof(int)]
+        char c[sizeof(int)];
     } x;
 
     x.i = 1;
