@@ -149,13 +149,14 @@ ADD_SUBDIRECTORY(src/com.example/study/random)
 ADD_SUBDIRECTORY(src/com.example/study/socket)
 ADD_SUBDIRECTORY(src/com.example/study/signal)
 ADD_SUBDIRECTORY(src/com.example/study/typedefdd)
+ADD_SUBDIRECTORY(src/com.example/study/filedd)
 
 
 
 # 遍历项目根目录下所有的 .cpp文件 【缺点：这种方法要求所有cpp文件命名不重复，不能含有中文，不能含有‘/’等字符！因为它就是直接Copy你的源码文件名的。】
-#file(GLOB_RECURSE files *.cpp)
-#foreach(file ${files})
-#    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${file})
-#    add_executable(${exe} ${file})
+#filess(GLOB_RECURSE files *.cpp)
+#foreach(filess ${files})
+#    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${filess})
+#    add_executable(${exe} ${filess})
 #    message(\ \ \ \ --\ src/${exe}.cpp\ will\ be\ compiled\ to\ bin/${exe})
 #endforeach()
