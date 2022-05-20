@@ -17,7 +17,7 @@ set(CMAKE_CXX_STANDARD 14)
 #link_directories(C:\\MinGW\\lib)
 
 
-add_executable(c_college main.c include/A.h)  ##该命令表示，生成可执行文件
+add_executable(c_college main.c include/A.h )  ##该命令表示，生成可执行文件
 
 
 
@@ -33,7 +33,7 @@ ADD_SUBDIRECTORY(src/com.example/chapter_use_lib)
 ADD_SUBDIRECTORY(src/com.example/chapter1/continue_break)
 ADD_SUBDIRECTORY(src/com.example/chapter1/struct)
 ADD_SUBDIRECTORY(src/com.example/chapter1/tradition_array_flaw)
-ADD_SUBDIRECTORY(src/com.example/chapter1/typedef)
+ADD_SUBDIRECTORY(src/com.example/chapter1/typedefaa)
 ADD_SUBDIRECTORY(src/com.example/chapter1/ui_99)
 ADD_SUBDIRECTORY(src/com.example/chapter1/what_is_a_variable_address)
 ADD_SUBDIRECTORY(src/com.example/chapter1/virus_memory)
@@ -148,6 +148,7 @@ ADD_SUBDIRECTORY(src/com.example/study/libraryfun)
 ADD_SUBDIRECTORY(src/com.example/study/random)
 ADD_SUBDIRECTORY(src/com.example/study/socket)
 ADD_SUBDIRECTORY(src/com.example/study/signal)
+ADD_SUBDIRECTORY(src/com.example/study/typedefdd)
 
 
 

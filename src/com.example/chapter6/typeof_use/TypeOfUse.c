@@ -1,5 +1,5 @@
-//C typedef
-//        C 语言提供了 typedef 关键字，您可以使用它来为类型取一个新的名字。下面的实例为单字节数字定义了一个术语 BYTE：
+//C typedefaa
+//        C 语言提供了 typedefaa 关键字，您可以使用它来为类型取一个新的名字。下面的实例为单字节数字定义了一个术语 BYTE：
 
 #include <string.h>
 #include <stdio.h>
@@ -19,11 +19,11 @@ typedef struct Books {
 } Book;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//typedef vs #define
-//#define 是 C 指令，用于为各种数据类型定义别名，与 typedef 类似，但是它们有以下几点不同：
+//typedefaa vs #define
+//#define 是 C 指令，用于为各种数据类型定义别名，与 typedefaa 类似，但是它们有以下几点不同：
 //
-//typedef 仅限于为类型定义符号名称，#define 不仅可以为类型定义别名，也能为数值定义别名，比如您可以定义 1 为 ONE。
-//typedef 是由编译器执行解释的，#define 语句是由预编译器进行处理的。
+//typedefaa 仅限于为类型定义符号名称，#define 不仅可以为类型定义别名，也能为数值定义别名，比如您可以定义 1 为 ONE。
+//typedefaa 是由编译器执行解释的，#define 语句是由预编译器进行处理的。
 #define TRUE 1
 #define FALSE 0
 

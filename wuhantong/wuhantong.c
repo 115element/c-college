@@ -6,14 +6,14 @@
 #include <Windows.h>
 
 //定义函数指针
-typedef int(__stdcall* ExecFunc)(int, const char*, int*, char**);
+typedef int(__stdcall *ExecFunc)(int, const char *, int *, char **);
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
     if (argc != 2) {
         return -1;
     }
-    const char* request = argv[1];
-    char* outData = 0;
+    const char *request = argv[1];
+    char *outData = 0;
     int outLen = 0;
 
     //printf("CWD=%s, dllHandle=%d, execProc=%d\n", cwd, (int)dllHandle, (int)fpExecFunc);
@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     //printf("Send: %s\n", request);
 
     HMODULE dllHandle = LoadLibraryA("PosCls.dll");
-    ExecFunc fpExecFunc = (ExecFunc)GetProcAddress(dllHandle, "Exec");
+    ExecFunc fpExecFunc = (ExecFunc) GetProcAddress(dllHandle, "Exec");
     int exitCode = fpExecFunc(24, request, &outLen, &outData);
 
     if (outData)
