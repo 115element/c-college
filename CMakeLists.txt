@@ -150,6 +150,7 @@ ADD_SUBDIRECTORY(src/com.example/study/socket)
 ADD_SUBDIRECTORY(src/com.example/study/signal)
 ADD_SUBDIRECTORY(src/com.example/study/typedefdd)
 ADD_SUBDIRECTORY(src/com.example/study/filedd)
+ADD_SUBDIRECTORY(src/com.example/main/forkdd)
 
 
 
