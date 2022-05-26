@@ -30,6 +30,12 @@ int main(){
     int sin_size;
 
     sockfd=socket(AF_INET,SOCK_STREAM,0);   //建立socket 
+    /**
+     * 指定协议。常用的协议有，IPPROTO_TCP、IPPTOTO_UDP、IPPROTO_SCTP、IPPROTO_TIPC等，
+     * 它们分别对应TCP传输协议、UDP传输协议、STCP传输协议、TIPC传输协议
+     * 当protocol(最后一个参数)为0时，会自动选择type类型对应的默认协议。
+     */
+    
     if(sockfd == -1){
         printf("socket failed:%d",errno);
         return -1;
@@ -45,7 +51,8 @@ int main(){
     listen(sockfd,BACKLOG);//开启监听 ，第二个参数是最大监听数 
     while(1){
         sin_size = sizeof(struct sockaddr_in);
-        new_fd = accept(sockfd,(struct sockaddr*)&their_addr,&sin_size); //在这里阻塞知道接收到消息，参数分别是socket句柄，接收到的地址信息以及大小 
+        //在这里阻塞知道接收到消息，参数分别是socket句柄，接收到的地址信息，以及大小
+        new_fd = accept(sockfd,(struct sockaddr*)&their_addr,&sin_size);  
         if(new_fd == -1){
             printf("receive failed");
         } else{
