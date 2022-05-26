@@ -26,7 +26,7 @@ pthread.h 是它的库。
 
 //线程函数
 void *test(void *ptr) {
-    for (int j = 0; j < 8; ++j) {
+    for (int j = 0; j < 8; j++) {
         printf("the pthread running, count: %d\n", j);
         sleep(1);
     }

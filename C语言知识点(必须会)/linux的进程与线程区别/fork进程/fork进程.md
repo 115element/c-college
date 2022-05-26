@@ -4,7 +4,7 @@
 
 2.特征信息：一般分系统进程、用户进程、或者内核进程等。
 
-3. 进程状态 ：运行、就绪、阻塞，表示进程现的运行情况。
+3.进程状态：运行、就绪、阻塞，表示进程现在运行情况。
 
 4.优先级：表示获得CPU控制权的优先级大小。
 
@@ -14,7 +14,7 @@
 
 7.资源需求、分配控制信息。
 
-8.进程实体信息，指明程序路径和名称，进程数据在物理内存还是在 交换分区 （分页）中。
+8.进程实体信息，指明程序路径和名称，进程数据在物理内存还是在交换分区（分页）中。
 
 9.其他信息：工作单位，工作区，文件信息等。
 
@@ -76,13 +76,14 @@ char str1[6] = "hello";
 char str2[6] = "world";
  
 int main(int argc, char ** argv) {
-    int fd = open("/tmp/test.txt",O_RDWR);
+    //O_RDWR读写打开，O_RDONLY只读打开，O_WRONLY只写打开。
+    int fd = open("/tmp/test.txt",O_RDWR); 
     if(fork() == 0){
         //	ssize_t cnt = read(fd,str,10);
 	    write(fd,str1,6);
 	    printf("Child process:%s\n",str);
     } else {
-        //		ssize_t cnt = read(fd,str,10);
+        //	ssize_t cnt = read(fd,str,10);
         write(fd,str2,6);
 	    printf("Parent process:%s\n",str);
     }
