@@ -3,10 +3,10 @@
 /* Description of data base entry for a single service.  */
 struct servent
 {
-  char *s_name;			/* Official service name.  */   //表示的是服务名
-  char **s_aliases;		/* Alias list.  */              //表示的是服务别名列表
-  int s_port;			/* Port number.  */             //表示的是端口号
-  char *s_proto;		/* Protocol to use.  */         //使用的协议
+  char  *s_name;	    /* Official service name.  */   //表示的是服务名
+  char  **s_aliases;    /* Alias list.  */              //表示的是服务别名列表
+  int   s_port;			/* Port number.  */             //表示的是端口号
+  char  *s_proto;		/* Protocol to use.  */         //使用的协议
 };
 ```
 以下是相关函数：
@@ -84,11 +84,11 @@ proto to use:   tcp
 /* Description of data base entry for a single host.  */
 struct hostent
 {
-  char *h_name;			/* Official name of host.  */   //正式主机名
-  char **h_aliases;		/* Alias list.  */              //主机别名
-  int h_addrtype;		/* Host address type.  */       //主机IP地址类型：IPV4-AF_INET
-  int h_length;			/* Length of address.  */       //主机IP地址字节长度，对于IPv4是四字节，即32位
-  char **h_addr_list;	/* List of addresses from name server.  */ //主机的IP地址列表
+  char  *h_name;		/* Official name of host.  */   //正式主机名
+  char  **h_aliases;	/* Alias list.  */              //主机别名
+  int   h_addrtype;		/* Host address type.  */       //主机IP地址类型：IPV4-AF_INET
+  int   h_length;		/* Length of address.  */       //主机IP地址字节长度，对于IPv4是四字节，即32位
+  char  **h_addr_list;	/* List of addresses from name server.  */ //主机的IP地址列表
   #define h_addr h_addr_list[0] /* Address, for backward compatibility.(为了向后兼容)*/ //保存的是IP地址
 };
 ```
