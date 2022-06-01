@@ -18,6 +18,7 @@ void function(int *num) {
 
 int main() {
 
+    printf("%llu\r\n", sizeof(long long));
 
     int l1 = sizeof(char *);
     int l2 = sizeof(int *);

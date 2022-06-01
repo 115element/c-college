@@ -1,3 +1,30 @@
+```text
+函数原型：
+int select(nfds, readfds, writefds, exceptfds, timeout)
+
+参数类型：
+int     nfds;
+fd_set  *readfds, *writefds, *exceptfds;
+struct  timeval *timeout;
+
+参数介绍：
+nfds：select监视的文件句柄数，视进程中打开的文件数而定,一般设为你要监视各文件中的最大文件号加一。
+（注：nfds并非一定表示监视的文件句柄数。官方文档仅指出：
+nfds is the highest-numbered file descriptor in any of the three sets, plus 1. 
+(可在linux环境中通过man select命令查得)）
+
+readfds：    select监视的可读文件句柄集合。
+writefds:    select监视的可写文件句柄集合。
+exceptfds：  select监视的异常文件句柄集合。
+timeout：    本次select()的超时结束时间。（见/usr/sys/select.h，可精确至百万分之一秒！）
+
+
+当readfds或writefds中映象的文件可读或可写或超时，本次select()
+就结束返回。程序员利用一组系统提供的宏在select()结束时便可判
+断哪一文件可读或可写，对Socket编程特别有用的就是readfds。
+```
+
+
 ###C语言实现select
 ```c
 #include <stdio.h>
@@ -50,8 +77,9 @@ void do_proxy (int usersockfd)
         FD_ZERO(&rdfdset);
         FD_SET(usersockfd,&rdfdset);
         FD_SET(isosockfd,&rdfdset);
-        if (select(FD_SETSIZE,&rdfdset,NULL,NULL,NULL) < 0)
+        if (select(FD_SETSIZE,&rdfdset,NULL,NULL,NULL) < 0) {
             errorout("select failed");
+        }
         /* is the client sending data? */
         if (FD_ISSET(usersockfd,&rdfdset)) {
             if ((iolen = read(usersockfd,buf,sizeof(buf))) <= 0) {
