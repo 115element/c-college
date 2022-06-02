@@ -1,4 +1,4 @@
-######UDP服务端
+######UDP服务端(接收广播示例)
 ```c
 #include <stdio.h>
 #include <string.h>
@@ -6,8 +6,7 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
-#define PORT 2000
-#define IP "127.0.0.1"
+#define BROADCAST_PORT 8080
 
 int main(void) {
 
@@ -34,13 +33,17 @@ int main(void) {
     printf("Socket create successfully\n");
     
     
-    //Set port and IP:
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(PORT);
-    server_addr.sin_addr.s_addr = inet_addr(IP);
+    //接收广播第一步：建立广播地址
+    struct sockaddr_in broadcastaddr;
+    broadcastaddr.sin_family = AF_INET;
+    broadcastaddr.sin_addr.s_addr = inet_addr("192.168.1.255"); //本机IP对应的广播地址，也可以通过ifconfig命令查看广播地址
+    // 例如：当前主机IP为：192.168.1.146，那么他的广播地址就是：192.168.1.255
+    broadcastaddr.sin_port = htons(BROADCAST_PORT);
     
+    
+    //接收广播第二步：绑定广播地址，准备接收广播信息。
     //Bind to the port and IP:
-    if (bind(socket_desc, (struct sockaddr *) &server_addr, sizeof(server_addr)) < 0) {
+    if (bind(socket_desc, (struct sockaddr *) &broadcastaddr, sizeof(broadcastaddr)) < 0) {
         printf("Could n`t bind to the port\n");
         return -1;
     }
@@ -62,30 +65,28 @@ int main(void) {
     //Respond to client
     strcpy(server_message, client_message);
     if (sendto(socket_desc, server_message, strlen(server_message), 0,
-    (struct sockaddr *) &client_addr, client_struct_length) < 0) {
+    (struct sockaddr *) &client_addr, sizeof(client_addr)) < 0) {
         printf("Can`t send\n");
         return -1;
     }
     
     //Close the socket;
     close(socket_desc);
-    
     return 0;
 }
 ```
 
 
-######UDP客户端
+######UDP客户端(发送广播示例)
 ```c
-
 #include <stdio.h>
 #include <string.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <unistd.h>
+#include <stdlib.h>
 
-#define DEST_PORT 2000
-#define DEST_IP "127.0.0.1"
+#define BROADCAST_PORT 8080
 
 int main() {
 
@@ -105,19 +106,33 @@ int main() {
         return -1;
     }
     printf("Socket created successfully\n");
+
+
+    //发送广播第一步：设置发送广播
+    int on = 1;
+    if(setsockopt(socket_desc,SOL_SOCKET,SO_BROADCAST,&on,sizeof(on)) < 0) {
+        printf("Error set broadcast\n");
+        exit(1);
+    }
     
-    //Set port and IP:
-    server_addr.sin_family = AF_INET;
-    server_addr.sin_port = htons(DEST_PORT);
-    server_addr.sin_addr.s_addr = inet_addr(DEST_IP);
     
     //Get input from the user;
     printf("Enter message:");
     scanf("%s", client_message);
+
+
+    //发送广播第二步：建立广播套接字地址
+    struct sockaddr_in broadcastaddr;
+    broadcastaddr.sin_family = AF_INET;
+    broadcastaddr.sin_addr.s_addr = inet_addr("192.168.1.255"); //本机IP对应的广播地址，也可以通过ifconfig命令查看广播地址
+    // 例如：当前主机IP为：192.168.1.146，那么他的广播地址就是：192.168.1.255
+    broadcastaddr.sin_port = htons(BROADCAST_PORT);
     
-    //Send the message to server;
+
+    ///发送广播第三步：向广播地址发送数据
+    //Send the message to server; 
     if (sendto(socket_desc, client_message, strlen(client_message), 0,
-    (struct sockaddr *) &server_addr, server_struct_length) < 0) {
+    (struct sockaddr *) &broadcastaddr, sizeof(broadcastaddr)) < 0) {
         printf("Unable to send message\n");
         return -1;
     }
@@ -132,7 +147,6 @@ int main() {
     
     //Close the socket
     close(socket_desc);
-    
     return 0;
 }
 ```

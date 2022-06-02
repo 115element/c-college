@@ -178,6 +178,37 @@ void udpserver(char *localport, char *serverip, char *serverport) {
         die("Bind error. Check that port is available.");
     }
 
+
+//-----------------------------------
+//组播的最大好处就是节省带宽。
+// 加入多播组
+////    struct ip_mreq
+////    {
+////        struct in_addr imr_multiaddr; //多播组的IP地址          //组播组的IP地址。
+////        struct in_addr imr_interface; //加入的客服端主机IP地址   //本地某一网络设备接口的IP地址。
+////    }
+//
+//    //组播相关结构体
+//    struct ip_mreq req;
+//    //加入多播组
+//    req.imr_multiaddr.s_addr = inet_addr("224.0.0.88");
+//    //将本机加入多播组
+//    req.imr_interface.s_addr = INADDR_ANY;
+//    //加入多播组
+//    int ret = setsockopt(serverSocket, IPPROTO_IP, IP_ADD_MEMBERSHIP, &req, sizeof(req));
+//    if (ret < 0) {
+//        die("setsockopt add error");
+//    }
+
+
+//退出多播组
+//    int ret = setsockopt(sockfd, IPPROTO_IP, IP_DROP_MEMBERSHIP, &req, sizeof(req));
+//    if (ret < 0) {
+//        die("setsockopt exit error");
+//    }
+//-----------------------------------
+
+
     /*
      * UDP proxy socket address.
      */
