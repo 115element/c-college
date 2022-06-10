@@ -42,7 +42,6 @@ ADD_SUBDIRECTORY(src/com.example/chapter1/enum)
 ADD_SUBDIRECTORY(src/com.example/chapter2/bubble_sort)
 ADD_SUBDIRECTORY(src/com.example/chapter2/queue)
 ADD_SUBDIRECTORY(src/com.example/chapter2/recombination_pointer)
-ADD_SUBDIRECTORY(src/com.example/chapter2/recursion)
 ADD_SUBDIRECTORY(src/com.example/chapter2/return_break)
 ADD_SUBDIRECTORY(src/com.example/chapter2/review_function)
 ADD_SUBDIRECTORY(src/com.example/chapter2/run_multi_source)
@@ -151,6 +150,7 @@ ADD_SUBDIRECTORY(src/com.example/study/signal)
 ADD_SUBDIRECTORY(src/com.example/study/typedefdd)
 ADD_SUBDIRECTORY(src/com.example/study/filedd)
 ADD_SUBDIRECTORY(src/com.example/main/forkdd)
+ADD_SUBDIRECTORY(src/com.example/recursion)
 
 
 
