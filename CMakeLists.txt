@@ -151,6 +151,8 @@ ADD_SUBDIRECTORY(src/com.example/study/typedefdd)
 ADD_SUBDIRECTORY(src/com.example/study/filedd)
 ADD_SUBDIRECTORY(src/com.example/main/forkdd)
 ADD_SUBDIRECTORY(src/com.example/recursion)
+ADD_SUBDIRECTORY(src/com.example/tree)
+ADD_SUBDIRECTORY(src/com.example/tree2)
 
 
 
