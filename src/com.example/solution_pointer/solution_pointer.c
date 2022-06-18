@@ -58,7 +58,8 @@ int main() {
 
     u_char str1[] = {};
     u_char str2[] = "nihaoya";
-    cpy_string(str1, str2, 7 + 1);
+    (void)cpy_string(str1, str2, 7 + 1);
+    //(void)这个写法只是一种防止编译器编译时报警告的用法。而此语句在代码中没有具体意义，类似变量的强制转换，不要返回值。
     printf("%s \n", str1);
 
 
