@@ -17,7 +17,7 @@ set(CMAKE_CXX_STANDARD 14)
 #link_directories(C:\\MinGW\\lib)
 
 
-add_executable(c_college main.c include/A.h )  ##该命令表示，生成可执行文件
+add_executable(c_college main.c include/A.h)  ##该命令表示，生成可执行文件
 
 
 
@@ -153,13 +153,15 @@ ADD_SUBDIRECTORY(src/com.example/main/forkdd)
 ADD_SUBDIRECTORY(src/com.example/recursion)
 ADD_SUBDIRECTORY(src/com.example/tree)
 ADD_SUBDIRECTORY(src/com.example/tree2)
+ADD_SUBDIRECTORY(src/com.example/solution_pointer)
+ADD_SUBDIRECTORY(src/com.example/paramspec)
 
 
 
 # 遍历项目根目录下所有的 .cpp文件 【缺点：这种方法要求所有cpp文件命名不重复，不能含有中文，不能含有‘/’等字符！因为它就是直接Copy你的源码文件名的。】
 #filess(GLOB_RECURSE files *.cpp)
 #foreach(filess ${files})
-#    string(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${filess})
+#    paramspec(REGEX REPLACE ".+/(.+)\\..*" "\\1" exe ${filess})
 #    add_executable(${exe} ${filess})
 #    message(\ \ \ \ --\ src/${exe}.cpp\ will\ be\ compiled\ to\ bin/${exe})
 #endforeach()

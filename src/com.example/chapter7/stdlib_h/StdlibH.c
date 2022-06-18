@@ -74,8 +74,8 @@
 //14	char *getenv(const char *name)
 //搜索 name 所指向的环境字符串，并返回相关的值给字符串。
 
-//15	int system(const char *string)
-//由 string 指定的命令传给要被命令处理器执行的主机环境。
+//15	int system(const char *paramspec)
+//由 paramspec 指定的命令传给要被命令处理器执行的主机环境。
 
 //16	void *bsearch(const void *key, const void *base, size_t nitems, size_t size, int (*compar)(const void *, const void *))
 //执行二分查找。

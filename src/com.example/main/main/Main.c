@@ -5,13 +5,13 @@
 int main(void) {
 
     char str[50];
-    strcpy(str, "1This is string.h library function");
+    strcpy(str, "1This is paramspec.h library function");
     puts(str);
     memset(str, 65, 7);
     puts(str);
 
 
-//    char *str1 = "2This is string.h library function";
+//    char *str1 = "2This is paramspec.h library function";
 //    puts(str1);
 //    memset(str1, '$', 7); //无法正确执行，此函数内部会报错， 因为str1指向的是常量，属于静态数据，只读；
 //    puts(str1);
@@ -20,8 +20,8 @@ int main(void) {
 
 
     //问：以下的初始化有什么区别？
-    char a[] = "string literal";
-    char *p = "string literal";
+    char a[] = "paramspec literal";
+    char *p = "paramspec literal";
 
     //当我向p[i]赋值的时候，我的程序崩溃了
 

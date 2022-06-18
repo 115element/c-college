@@ -136,11 +136,11 @@ void die(char *msg) {
 
 /**
  * Start udp proxy service. Local port is udp port value on which proxy receive datagram.
- * All arguments are passed as string and are converted into integers.
+ * All arguments are passed as paramspec and are converted into integers.
  *
- * @param localport a string that contains valid udp port value
- * @param serverip a string that contains valid server ip address
- * @param serverport a string that contains valid server port
+ * @param localport a paramspec that contains valid udp port value
+ * @param serverip a paramspec that contains valid server ip address
+ * @param serverport a paramspec that contains valid server port
  */
 void udpserver(char *localport, char *serverip, char *serverport) {
     struct sockaddr_in si_me;
