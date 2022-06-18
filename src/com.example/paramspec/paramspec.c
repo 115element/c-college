@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <malloc.h>
+#include <string.h>
 
 void func1(char *dst) {
     *dst = 'c';
@@ -7,6 +9,7 @@ void func1(char *dst) {
 void func2(char *dst) {
     *dst = 'c';
 }
+
 
 
 int main() {
