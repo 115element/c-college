@@ -155,6 +155,7 @@ ADD_SUBDIRECTORY(src/com.example/tree)
 ADD_SUBDIRECTORY(src/com.example/tree2)
 ADD_SUBDIRECTORY(src/com.example/solution_pointer)
 ADD_SUBDIRECTORY(src/com.example/paramspec)
+ADD_SUBDIRECTORY(src/com.example/funpointer)
 
 
 
