@@ -17,7 +17,7 @@ set(CMAKE_CXX_STANDARD 14)
 #link_directories(C:\\MinGW\\lib)
 
 
-add_executable(c_college main.c include/A.h)  ##该命令表示，生成可执行文件
+add_executable(c_college main.c include/A.h )  ##该命令表示，生成可执行文件
 
 
 
@@ -139,6 +139,7 @@ ADD_SUBDIRECTORY(src/com.example/study/static2)
 ADD_SUBDIRECTORY(src/com.example/study/static3)
 ADD_SUBDIRECTORY(src/com.example/study/decimal)
 ADD_SUBDIRECTORY(src/com.example/main/main)
+ADD_SUBDIRECTORY(src/com.example/main/multi_p)
 ADD_SUBDIRECTORY(src/com.example/main/moreparam)
 ADD_SUBDIRECTORY(src/com.example/study/eof)
 ADD_SUBDIRECTORY(src/com.example/study/function)
