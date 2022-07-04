@@ -17,8 +17,8 @@ void function(int *num) {
 }
 
 int main() {
-
-    printf("%llu\r\n", sizeof(long long));
+    printf("%d\r\n", sizeof(intptr_t));
+    printf("%u\r\n", sizeof(long long));
 
     int l1 = sizeof(char *);
     int l2 = sizeof(int *);
