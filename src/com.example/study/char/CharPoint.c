@@ -41,4 +41,16 @@ int main(void) {
     int i2 = sizeof(char); //返回1
     int i3 = sizeof(int); //返回4
     printf("%d  %d  %d\n", i1, i2, i3);
+
+
+    /// 有符号 char 数据范围  -128 ~ 127
+    /// 无符号 char 数据范围  0 ~ 255
+    char ii1 = 129;          //1000 0001  (char的范围是-128~127,输入129的话就会高位溢出，变成-127)
+    int r1 = ii1+1; //-126
+    unsigned char ii2 = 129; //1000 0001  (是129)
+    int r2 = ii2+1; //130
+
+    //C语言中直接写"123"代表是有符号字符串
+    unsigned char* str = (unsigned char*)"123";
+
 }
