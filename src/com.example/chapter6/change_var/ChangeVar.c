@@ -37,7 +37,7 @@ double average(int num, ...) {
 
     //访问所有赋给 valist 的参数
     for (int j = 0; j < num; ++j) {
-        sum += va_arg(vaList, int);
+        sum += va_arg(vaList, int);  //指定参数的类型
     }
 
     //清理为 valist 保留的内存
