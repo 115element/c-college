@@ -39,6 +39,20 @@ void fun(int a, ...) {
 //}
 
 
+#define bufsize 80
+char buffer[bufsize];
+int vspf(char *fmt, ...)
+{
+    va_list argptr;
+    int cnt;
+            va_start(argptr, fmt);
+    cnt = vsnprintf(buffer, bufsize, fmt, argptr);
+            va_end(argptr);
+    return(cnt);
+}
+
+
+
 int main() {
     int p1 = sizeof('a');
     int p2 = sizeof(char);
@@ -47,7 +61,13 @@ int main() {
     //C语言中的字符常量是int型，因此sizeof('a')是sizeof(int);
 
     fun(20, 40, 60, 80, 0);
-    //funpp(20, 'A', 333, 333);
+
+
+    int inumber = 30;
+    float fnumber = 90.0f;
+    char string[4] = "abc";
+    vspf("%d %f %s", inumber, fnumber, string);
+
     return 0;
 }
 
