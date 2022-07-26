@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 /// 1、定义一个函数，最后一个参数为省略号，省略号前面可以设置自定义参数。
 /// 2、在函数定义中创建一个 va_list 类型变量，该类型是在 stdarg.h 头文件中定义的。
@@ -21,22 +22,23 @@ void fun(int a, ...) {
 }
 
 
-//void funpp(int a, ...) {
-//    va_list pp;
-//    int n = 1;
-//            va_start(pp, a);
-//    do {
-//        if (n == 1) {
-//            char c1 = va_arg(pp, char);
-//            printf("%c\n", c1);
-//        } else {
-//            int i1 = va_arg(pp, int);
-//            printf("%d\n", i1);
-//        }
-//        printf("第 %d 个参数 \n", n++);
-//    } while (pp != NULL);
-//            va_end(pp);
-//}
+void funMore(int a, ...) {
+    va_list pp;
+    int n = 1;
+            va_start(pp, a);
+    do {
+        printf("the parameter %d : \n", n);
+        if (n == 1) {
+            char c1 = va_arg(pp, char);
+            printf("%c\n", c1);
+        } else {
+            int i1 = va_arg(pp, int);
+            printf("%d\n", i1);
+        }
+        n++;
+    } while (n < 5);
+            va_end(pp);
+}
 
 
 #define bufsize 80
@@ -54,6 +56,9 @@ int vspf(char *fmt, ...)
 
 
 int main() {
+
+    system("chcp 65001");
+
     int p1 = sizeof('a');
     int p2 = sizeof(char);
     int p3 = sizeof(int);
@@ -66,8 +71,9 @@ int main() {
     int inumber = 30;
     float fnumber = 90.0f;
     char string[4] = "abc";
-    vspf("%d %f %s", inumber, fnumber, string);
+    //vspf("%d %f %s", inumber, fnumber, string);
 
+    funMore(1,'M',3,4,5); //多参数，并且不同数据类型
     return 0;
 }
 
