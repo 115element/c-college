@@ -1,1 +1,0 @@
-add_executable(change_var ChangeVar.c)

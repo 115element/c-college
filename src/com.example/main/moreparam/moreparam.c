@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
@@ -29,8 +28,8 @@ void funMore(int a, ...) {
     do {
         printf("the parameter %d : \n", n);
         if (n == 1) {
-            char c1 = va_arg(pp, char);
-            printf("%c\n", c1);
+            char *c1 = va_arg(pp, char*);
+            printf("%s\n", c1);
         } else {
             int i1 = va_arg(pp, int);
             printf("%d\n", i1);
@@ -41,25 +40,23 @@ void funMore(int a, ...) {
 }
 
 
-#define bufsize 80
-char buffer[bufsize];
-int vspf(char *fmt, ...)
-{
+#define BUF_SIZE 80
+char buffer[BUF_SIZE];
+int vspf(char *fmt, ...) {
     va_list argptr;
     int cnt;
             va_start(argptr, fmt);
-    cnt = vsnprintf(buffer, bufsize, fmt, argptr);
+    cnt = vsnprintf(buffer, BUF_SIZE, fmt, argptr);
             va_end(argptr);
-    return(cnt);
+    return (cnt);
 }
 
 
-
 int main() {
-
     system("chcp 65001");
 
-    int p1 = sizeof('a');
+    int p1 = sizeof('a');  //4
+    int p11 = sizeof("a"); //2
     int p2 = sizeof(char);
     int p3 = sizeof(int);
     printf("%d %d %d\n", p1, p2, p3); // 4字节 1字节 4字节
@@ -68,12 +65,13 @@ int main() {
     fun(20, 40, 60, 80, 0);
 
 
-    int inumber = 30;
-    float fnumber = 90.0f;
+    int iNumber = 30;
+    float fNumber = 90.0f;
     char string[4] = "abc";
-    //vspf("%d %f %s", inumber, fnumber, string);
+    vspf("%d %f %s", iNumber, fNumber, string);
 
-    funMore(1,'M',3,4,5); //多参数，并且不同数据类型
+
+    funMore(1, "Mime", 3, 4, 5); //多参数，并且不同数据类型
     return 0;
 }
 
